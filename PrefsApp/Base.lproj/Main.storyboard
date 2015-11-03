@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SettingsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ole-eP-rii">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Settings" id="2Vf-ee-Czb"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jc6-a7-M3g">
+                                <rect key="frame" x="149" y="64" width="303" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="303" id="5s5-fC-tS3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vZA-qc-HXq"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xkp-v7-9EZ">
+                                <rect key="frame" x="149" y="102" width="303" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5oy-xc-KPN"/>
+                                </connections>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yTj-6K-Ayo">
+                                <rect key="frame" x="0.0" y="140" width="600" height="216"/>
+                                <animations/>
+                                <date key="date" timeIntervalSinceReferenceDate="467697630.674326">
+                                    <!--2015-10-28 04:00:30 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-2556190800">
+                                    <!--1920-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="788871600">
+                                    <!--2025-12-31 11:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="en_US"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7C-ae-ZHM">
+                                <rect key="frame" x="253" y="364" width="94" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Save Settings"/>
+                                <connections>
+                                    <action selector="btnSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CdT-CH-vmO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAG-dB-RgU">
+                                <rect key="frame" x="253" y="402" width="95" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Load Settings"/>
+                                <connections>
+                                    <action selector="btnLoad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KcM-qS-Rjm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h7C-ae-ZHM" firstAttribute="top" secondItem="yTj-6K-Ayo" secondAttribute="bottom" constant="8" symbolic="YES" id="0Av-Jo-zuq"/>
+                            <constraint firstItem="Jc6-a7-M3g" firstAttribute="trailing" secondItem="xkp-v7-9EZ" secondAttribute="trailing" id="4PX-uN-48e"/>
+                            <constraint firstItem="h7C-ae-ZHM" firstAttribute="leading" secondItem="AAG-dB-RgU" secondAttribute="leading" id="BZR-Vd-Wfp"/>
+                            <constraint firstItem="Ole-eP-rii" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Joh-6L-Rnf"/>
+                            <constraint firstItem="yTj-6K-Ayo" firstAttribute="trailing" secondItem="Ole-eP-rii" secondAttribute="trailing" id="LRY-ed-b1U"/>
+                            <constraint firstItem="Jc6-a7-M3g" firstAttribute="top" secondItem="Ole-eP-rii" secondAttribute="bottom" id="MAj-6B-Xh4"/>
+                            <constraint firstItem="xkp-v7-9EZ" firstAttribute="leading" secondItem="Jc6-a7-M3g" secondAttribute="leading" id="OXJ-G8-KGo"/>
+                            <constraint firstItem="yTj-6K-Ayo" firstAttribute="top" secondItem="xkp-v7-9EZ" secondAttribute="bottom" constant="8" symbolic="YES" id="bgn-0i-XeP"/>
+                            <constraint firstItem="Jc6-a7-M3g" firstAttribute="centerX" secondItem="Ole-eP-rii" secondAttribute="centerX" id="dmd-P4-z3F"/>
+                            <constraint firstAttribute="trailing" secondItem="yTj-6K-Ayo" secondAttribute="trailing" id="h0E-EQ-GX2"/>
+                            <constraint firstItem="AAG-dB-RgU" firstAttribute="top" secondItem="h7C-ae-ZHM" secondAttribute="bottom" constant="8" symbolic="YES" id="qG6-Ie-jVK"/>
+                            <constraint firstItem="xkp-v7-9EZ" firstAttribute="top" secondItem="Jc6-a7-M3g" secondAttribute="bottom" constant="8" symbolic="YES" id="qkt-Hz-99G"/>
+                            <constraint firstItem="Ole-eP-rii" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sFJ-Vz-stg"/>
+                            <constraint firstItem="yTj-6K-Ayo" firstAttribute="leading" secondItem="Ole-eP-rii" secondAttribute="leading" id="so6-0g-9A8"/>
+                            <constraint firstItem="h7C-ae-ZHM" firstAttribute="centerX" secondItem="yTj-6K-Ayo" secondAttribute="centerX" id="ycg-8S-9Ov"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Address" destination="xkp-v7-9EZ" id="OHA-84-Q14"/>
+                        <outlet property="Date" destination="yTj-6K-Ayo" id="uhg-UZ-lav"/>
+                        <outlet property="FullName" destination="Jc6-a7-M3g" id="PIf-YV-16G"/>
+                        <outlet property="btnSave" destination="h7C-ae-ZHM" id="pfP-AO-hbn"/>
+                        <outlet property="txtAddress" destination="xkp-v7-9EZ" id="3ae-Dw-Ewo"/>
+                        <outlet property="txtFullName" destination="Jc6-a7-M3g" id="0Sv-zc-CNi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="309"/>
+        </scene>
+    </scenes>
+</document>
